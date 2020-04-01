@@ -12,5 +12,13 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework:spring-context:5.1.5.RELEASE'
+    implementation 'org.springframework:spring-core:5.1.5.RELEASE'
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.5.2"
+    testImplementation "org.junit.platform:junit-platform-runner:1.5.2"
+    testImplementation 'org.springframework:spring-test:5.1.5.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
 }
